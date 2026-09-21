@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Records - Iyunga Secondary School</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo-area">
+
+        <div class="school-logo">
+            IS
+        </div>
+
+        <div>
+            <h2>IYUNGA SECONDARY SCHOOL</h2>
+            <p>School Management System</p>
+        </div>
+
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="admission.html">Admission</a>
+        <a href="students.html">Student Records</a>
+    </nav>
+
+</header>
+
+
+<section class="section light">
+
+    <h2>Student Records</h2>
+
+    <p class="section-description">
+        View, update and delete student information.
+    </p>
+
+
+    <!-- DASHBOARD -->
+
+    <div class="dashboard-cards">
+
+        <div class="dashboard-card">
+            <h3>Total Students</h3>
+            <span id="totalStudents">0</span>
+        </div>
+
+        <div class="dashboard-card">
+            <h3>Male Students</h3>
+            <span id="maleStudents">0</span>
+        </div>
+
+        <div class="dashboard-card">
+            <h3>Female Students</h3>
+            <span id="femaleStudents">0</span>
+        </div>
+
+    </div>
+
+
+    <!-- SEARCH -->
+
+    <div class="student-controls">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search student..."
+            onkeyup="searchStudents()"
+        >
+
+        <button onclick="clearStudents()">
+            Clear All
+        </button>
+
+    </div>
+
+
+    <!-- TABLE -->
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Course</th>
+                    <th>Actions</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="studentTableBody">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <p>
+        &copy; 2026 Iyunga Secondary School
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
